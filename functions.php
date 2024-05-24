@@ -102,6 +102,13 @@ function indie_game_setup() {
 }
 add_action( 'after_setup_theme', 'indie_game_setup' );
 
+// Customizer settings for the hero section
+
+
+
+
+
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
