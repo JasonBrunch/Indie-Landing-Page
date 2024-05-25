@@ -70,20 +70,27 @@ html {
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
 }
+body.admin-bar .site-header {
+    top: 32px; /* Adjust based on the height of the WordPress admin bar */
+}
 
+body.admin-bar .hero-section {
+    padding-top: calc(70px + 32px); /* Adjust based on the height of your header and admin bar */
+}
 /* Sections
 	 ========================================================================== */
 
 /* Hero Section Styles */
 .hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
 
-	height: 100vh;
-	display: flex;
-	align-items: center;
-
-	text-align: left;
-	color: #fff;
-	position: relative;
+    text-align: center;
+    color: #fff;
+    position: relative;
+   
+    padding-top: 70px; /* Adjust this value to the height of your header */
 }
 
 .hero-content {
@@ -134,9 +141,9 @@ html {
 
 /*VIDEO SECTION*/
 .video-section {
-	background-color: #800080;
+
 	text-align: center;
-	padding: 5rem 0 10rem 0;
+	padding: 5rem 0 5rem 0;
 }
 
 .section-title {}
@@ -156,7 +163,9 @@ html {
 
 .about-game .container,
 .media-section .container,
-.news-section .container {
+.news-section .container,
+.site-footer .container,
+.header-container{
 	max-width: 800px;
 	margin: 0 auto;
 }
@@ -210,7 +219,7 @@ html {
 
 .news-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* Always 3 columns */
     gap: 20px;
 }
 
@@ -223,12 +232,13 @@ html {
     overflow: hidden;
     text-align: left;
     position: relative;
+    height: 100%; /* Ensure the card takes full height */
 }
 
 .news-card-image-container {
-    position: relative;
     width: 100%;
     padding-top: 56.25%; /* 16:9 aspect ratio */
+    position: relative;
     overflow: hidden;
 }
 
@@ -243,10 +253,10 @@ html {
 
 .news-card-content {
     padding: 1rem;
-    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex-grow: 1; /* Ensure content takes remaining space */
 }
 
 .news-card-title {
@@ -273,6 +283,92 @@ html {
 .news-card-link:hover {
     background-color: #0073aa;
     color: #fff;
+}
+
+/*NEWSLETTER SECTION*/
+/* NEWSLETTER SECTION */
+.newsletter-section {
+
+}
+
+.newsletter-content {
+    display: flex;
+    align-items: center;
+
+    gap: 1rem; /* Space between text and form elements */
+    text-align: center;
+}
+
+.newsletter-text {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+.wpcf7 form {
+    display: flex;
+   
+    gap: 1rem; /* Ensure there's space between form elements */
+    flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.wpcf7-form-control-wrap {
+    display: flex;
+}
+
+.wpcf7-form-control.wpcf7-email {
+    padding: 0.5rem;
+    font-size: 1rem;
+    flex: 1;
+    min-width: 250px;
+}
+
+.wpcf7-form-control.wpcf7-submit {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #0073aa;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.wpcf7-form-control.wpcf7-submit:hover {
+    background-color: #005a87;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .news-grid {
+        grid-template-columns: 1fr; /* 1 column for small screens */
+    }
+}
+
+
+/* Footer Section Styles */
+.footer-container{
+	display: flex;
+	flex-direction: column;
+}
+
+.copyright-container {
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+}
+.social-media-icons {
+display: flex;
+align-items: center;
+}
+
+.bottom-page-container{
+	display: flex;
+	justify-content: space-between;
+
 }
 
 
@@ -854,16 +950,21 @@ textarea {
 
 /* Header Styles */
 .site-header {
-    background-color: #333;
+    background-color: transparent; /* Make the background transparent */
     color: #fff;
     padding: 1rem 0;
+    position: fixed; /* Fixed positioning to stay at the top */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it appears above other content */
 }
 
 .header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
+    
     margin: 0 auto;
     padding: 0 1rem;
 }

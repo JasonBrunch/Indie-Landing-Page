@@ -20,9 +20,9 @@ get_header(); ?>
         </section>
 
         <section class="video-section">
-      
+                <!-- This doesnt look great maybe 
                 <h2 class="section-title">TRAILER</h2>
-            
+                -->
                 <div class="video-container">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/9bZkp7q19f0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
@@ -93,6 +93,16 @@ get_header(); ?>
                 else : ?>
                     <p><?php esc_html_e( 'No news found.', 'indie-game' ); ?></p>
                 <?php endif; ?>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section" id="cta">
+            <div class="container">
+                <div class="newsletter-content">
+                    <div class="newsletter-text">Subscribe for the latest news</div>
+                    <?php echo do_shortcode('[contact-form-7 id="95f73e3" title="Newsletter Sign Up"]'); ?>
                 </div>
             </div>
         </section>
