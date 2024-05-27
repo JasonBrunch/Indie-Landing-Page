@@ -70,13 +70,9 @@ html {
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
 }
-body.admin-bar .site-header {
-    top: 32px; /* Adjust based on the height of the WordPress admin bar */
-}
 
-body.admin-bar .hero-section {
-    padding-top: calc(70px + 32px); /* Adjust based on the height of your header and admin bar */
-}
+
+
 /* Sections
 	 ========================================================================== */
 
@@ -84,23 +80,23 @@ body.admin-bar .hero-section {
 .hero-section {
     height: 100vh;
     display: flex;
-    align-items: center;
-
-    text-align: center;
     color: #fff;
-    position: relative;
-   
-    padding-top: 70px; /* Adjust this value to the height of your header */
+	display:flex;
+	jusify-content: center;
+	flex-direction: column;
+	background-color: coral;
+
 }
 
 .hero-content {
-	position: relative;
 	z-index: 2;
-	background-color: chocolate;
-	padding: 0 0 0 4rem;
-	margin: 10rem 0 0 0;
+	background-color: rgb(38, 162, 27);
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+
 }
 
 .hero-title {
@@ -119,7 +115,7 @@ body.admin-bar .hero-section {
 .button-container {
 	display: flex;
 	background-color: chartreuse;
-	justify-content: flex-end;
+	justify-content: center;
 	width: 100%;
 }
 
@@ -139,11 +135,69 @@ body.admin-bar .hero-section {
 }
 
 
+.steam-button-container {
+    background-color: blueviolet;
+    padding: 10px;
+}
+
+.steam-inner-content {
+    display: flex;
+    align-items: center; /* Ensure items align at the start */
+    gap: 10px; /* Add some gap between the image and the text */
+	background-color: lightgreen;
+}
+
+/*STEAM BUTTON SECTION*/
+.steam-button-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    background-color: black;
+ 
+}
+
+.steam-image-wrapper {
+    flex-shrink: 0; /* Prevent the image wrapper from shrinking */
+}
+
+.steam-image {
+    width: 100px;  /* Set the width to your desired value */
+    height: auto; /* Allow the height to adjust automatically */
+}
+
+.steam-button-description {
+    color: white; /* Ensure the text color contrasts with the background */
+}
+.buynow-button-container{
+	background-color: orangered;
+	display: flex;
+	justify-content: end;
+}
+
+.steam-button {
+    background-color: #0073aa;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.steam-button:hover {
+    background-color: #005a87;
+}
+
 /*VIDEO SECTION*/
 .video-section {
 
-	text-align: center;
-	padding: 5rem 0 5rem 0;
+
+}
+.video-section-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color:#0073aa
 }
 
 .section-title {}
@@ -161,6 +215,7 @@ body.admin-bar .hero-section {
 	text-align: center;
 }
 
+.steam-button-section .container,
 .about-game .container,
 .media-section .container,
 .news-section .container,
@@ -950,10 +1005,9 @@ textarea {
 
 /* Header Styles */
 .site-header {
-    background-color: transparent; /* Make the background transparent */
+    background-color: dodgerblue;
     color: #fff;
     padding: 1rem 0;
-    position: fixed; /* Fixed positioning to stay at the top */
     width: 100%;
     top: 0;
     left: 0;

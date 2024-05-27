@@ -9,7 +9,7 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-        <section class="hero-section" style="background-image: url('<?php echo esc_url(get_theme_mod('hero_background_image', 'default-image-url.jpg')); ?>'); background-size: cover; background-position: center;">
+        <section class="hero-section">
             <div class="hero-content">
                 <h1 class="hero-title"><?php echo esc_html(get_theme_mod('hero_title', 'Welcome to Chrono Rebellion')); ?></h1>
                 <p class="hero-subtitle"><?php echo esc_html(get_theme_mod('hero_subtitle', 'An epic journey awaits')); ?></p>
@@ -18,14 +18,56 @@ get_header(); ?>
                 </div>
             </div>
         </section>
+        <!-- Steam Button Section -->
+        <section class="steam-button-section">
+            <div class="container">
+                <div class="steam-button-container">
+                    <div class="steam-button-content">
+                        <h2 class="steam-button-title">Wizard Hunter 2348 on Steam</h2>
+                        <div class="steam-inner-content">
+                            <div class="steam-image-wrapper">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/steamImage.jpg" alt="Steam Image" class="steam-image">
+                            </div>
+                            <p class="steam-button-description">Wizard Hunter is a medieval strategy game featuring in-depth city building, large-scale tactical battles, and complex economic and social simulations. Rule your lands as a medieval lord -- the seasons pass, the weather changes, and cities rise and fall.</p>
+                        </div>
+                        <div class="buynow-button-container">                    
+                            <a href="https://store.steampowered.com/app/1234567" class="steam-button">Buy on Steam</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         <section class="video-section">
-                <!-- This doesnt look great maybe 
-                <h2 class="section-title">TRAILER</h2>
-                -->
+            <!-- This doesnt look great maybe 
+            <h2 class="section-title">TRAILER</h2>
+            -->
+            <div class="video-section-container">
                 <div class="video-container">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/9bZkp7q19f0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
+                <div class="feature-container">
+                    <h2 class="feature-heading">Lorem Ipsum is simply dummy text.</h2>
+                    <p class="feature-description">Lorem ipsum dolar sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidunt ut labore.</p>
+                    <div class="feature-item">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/facebook.svg"  alt="Feature 1" class="feature-icon">
+                        <p class="feature-text">Lorem ipsum dolar sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/facebook.svg"  alt="Feature 2" class="feature-icon">
+                        <p class="feature-text">Lorem ipsum dolar sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/facebook.svg" alt="Feature 3" class="feature-icon">
+                        <p class="feature-text">Lorem ipsum dolar sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/facebook.svg" alt="Feature 3" class="feature-icon">
+                        <p class="feature-text">Lorem ipsum dolar sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
        
         </section>
 
