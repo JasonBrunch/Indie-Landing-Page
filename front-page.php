@@ -40,9 +40,6 @@ get_header(); ?>
 
 
         <section class="video-section">
-            <!-- This doesnt look great maybe 
-            <h2 class="section-title">TRAILER</h2>
-            -->
             <div class="video-section-container">
                 <div class="video-container">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/9bZkp7q19f0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -51,11 +48,11 @@ get_header(); ?>
                     <h2 class="feature-heading">Lorem Ipsum is simply dummy text.</h2>
                     <p class="feature-description">Lorem ipsum dolar sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidunt ut labore.</p>
                     <div class="feature-item">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/facebook.svg"  alt="Feature 1" class="feature-icon">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/facebook.svg" alt="Feature 1" class="feature-icon">
                         <p class="feature-text">Lorem ipsum dolar sit amet, consectetur adipiscing elit.</p>
                     </div>
                     <div class="feature-item">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/facebook.svg"  alt="Feature 2" class="feature-icon">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/facebook.svg" alt="Feature 2" class="feature-icon">
                         <p class="feature-text">Lorem ipsum dolar sit amet, consectetur adipiscing elit.</p>
                     </div>
                     <div class="feature-item">
@@ -68,40 +65,26 @@ get_header(); ?>
                     </div>
                 </div>
             </div>
-       
-        </section>
+</section>
 
-        <!-- About the Game Section -->
-        <section class="about-game">
-            <div class="container">
-                <h2 class="section-title">ABOUT THE GAME</h2>
-                <hr class="section-divider">
-                <p class="game-description">
-                    Chrono Rebellion: The Dragon Prince is a Tactical RPG set in a totalitarian steampunk world. Follow the journey of the prince as he battles to reclaim his throne and restore peace to the kingdom. Engage in strategic turn-based combat, master the job system, and uncover the secrets of the past.
-                </p>
-                <p class="game-description">
-                    The prince finds himself thousands of years in the future, where things are ruled still by his uncle's lineage in an oppressive and grim regime. So the basic story will be him gathering allies to overthrow the current king, and maybe find a way to return to the past and stop this from ever happening.
-                </p>
-            </div>
-        </section>
+
+        
 
         <!-- Media Section -->
         <section class="media-section">
             <div class="container">
-                <h2 class="section-title">MEDIA</h2>
-                <hr class="section-divider">
+              
+
                 <div class="media-grid">
                     <div class="media-item"><img src="http://indie-game.local/wp-content/uploads/2024/05/image2.png" alt="Screenshot 1"></div>
                     <div class="media-item"><img src="http://indie-game.local/wp-content/uploads/2024/05/image5.png" alt="Screenshot 2"></div>
                     <div class="media-item"><img src="http://indie-game.local/wp-content/uploads/2024/05/image4.png" alt="Screenshot 3"></div>
                     <div class="media-item"><img src="http://indie-game.local/wp-content/uploads/2024/05/image3.png" alt="Screenshot 4"></div>
-                    <div class="media-item"><img src="http://indie-game.local/wp-content/uploads/2024/05/image.png" alt="Screenshot 5"></div>
-                    <div class="media-item"><img src="http://indie-game.local/wp-content/uploads/2024/05/image6.png" alt="Screenshot 6"></div>
                 </div>
             </div>
         </section>
 
-     
+    
         <!-- News Section -->
         <section class="news-section">
             <div class="container">
@@ -139,16 +122,34 @@ get_header(); ?>
             </div>
         </section>
 
-        <!-- Newsletter Section -->
-        <section class="newsletter-section" id="cta">
+
+              
+
+
+        <Section class="reviews-section">
             <div class="container">
-                <div class="newsletter-content">
-                    <div class="newsletter-text">Subscribe for the latest news</div>
-                    <?php echo do_shortcode('[contact-form-7 id="95f73e3" title="Newsletter Sign Up"]'); ?>
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-card-content">
+                            <h3 class="review-card-title">"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</h3>
+                            <p class="review-card-excerpt">- John Doe, IGN</p>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-card-content">
+                            <h3 class="review-card-title">"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</h3>
+                            <p class="review-card-excerpt">- Jane Doe, GameSpot</p>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-card-content">
+                            <h3 class="review-card-title">"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</h3>
+                            <p class="review-card-excerpt">- John Smith, PC Gamer</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-
 
 
 

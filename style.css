@@ -188,16 +188,56 @@ html {
     background-color: #005a87;
 }
 
-/*VIDEO SECTION*/
+/* VIDEO SECTION */
 .video-section {
-
-
+    
 }
-.video-section-container{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color:#0073aa
+
+.video-section-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; /* Space between video and feature container */
+    background-color: #0073aa;
+}
+
+.video-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center items vertically */
+    gap: 1rem; /* Space between feature items */
+    background-color: #992753;
+    padding: 1rem;
+}
+
+.feature-heading, .feature-description {
+    margin: 0; /* Remove default margin */
+    text-align: left; /* Align text to the left */
+    color: white;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Space between icon and text */
+}
+
+.feature-icon {
+    width: 40px; /* Adjust size as needed */
+    height: auto;
+}
+
+.feature-text {
+    color: white;
+    margin: 0; /* Remove default margin */
 }
 
 .section-title {}
@@ -207,7 +247,7 @@ html {
 
 
 /* About the Game and Media Section Styles */
-.about-game,
+
 .media-section,
 .news-section {
 	padding: 3rem 1rem;
@@ -216,10 +256,13 @@ html {
 }
 
 .steam-button-section .container,
-.about-game .container,
 .media-section .container,
 .news-section .container,
 .site-footer .container,
+.reviews-section .container {
+	max-width: 800px;
+	margin: 0 auto;
+}
 .header-container{
 	max-width: 800px;
 	margin: 0 auto;
@@ -340,7 +383,18 @@ html {
     color: #fff;
 }
 
-/*NEWSLETTER SECTION*/
+
+/*REVIEWS SECTION*/
+.reviews-grid{
+	background-color: aqua;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}
+
+
 /* NEWSLETTER SECTION */
 .newsletter-section {
 
@@ -404,29 +458,53 @@ html {
 
 
 /* Footer Section Styles */
-.footer-container{
+
+.footer-content{
+	background-color: crimson;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	
 }
 
-.copyright-container {
-display: flex;
-align-items: center;
-justify-content: space-between;
-
-}
-.social-media-icons {
-display: flex;
-align-items: center;
-}
-
-.bottom-page-container{
+.subscribe-button-container{
+	background-color: darkorange;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 
 }
+.more-footer-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #0073aa;
+	color: white;
+	
+}	
+.footer-logo{
+	width: 100px;
+	height: auto;
+}
+.footer-legal {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333; /* or any background color you prefer */
+    color: #fff; /* or any text color you prefer */
+}
 
+.footer-legal p {
+    margin: 0;
+}
 
+.footer-legal a {
+    color: #fff; /* or any link color you prefer */
+    text-decoration: none;
+}
+
+.footer-legal a:hover {
+    text-decoration: underline;
+}
 
 
 /**
