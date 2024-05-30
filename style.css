@@ -78,144 +78,134 @@ html {
 
 /* Hero Section Styles */
 .hero-section {
+	position: relative; /* Ensure it can be overlaid by the header */
     height: 100vh;
     display: flex;
     color: #fff;
-	display:flex;
-	jusify-content: center;
-	flex-direction: column;
-	background-color: coral;
 
+    flex-direction: column;
+    background-size: cover; /* Ensures the background image covers the entire section */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    position: relative; /* Ensure the content is positioned relative to the section */
+	z-index: 1; /* Ensure it is below the header and other content */
 }
 
 .hero-content {
 	z-index: 2;
-	background-color: rgb(38, 162, 27);
+
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	
 	align-items: center;
-
 
 }
 
 .hero-title {
-	background-color: #800080;
-	font-size: 4rem;
-	margin: 0;
+	margin-bottom: 0;
 
 }
 
 .hero-subtitle {
-	font-size: 1.5rem;
-	margin: 0;
+
+margin-top: 0;
 
 }
 
 .button-container {
-	display: flex;
-	background-color: chartreuse;
-	justify-content: center;
-	width: 100%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+
 }
 
 .hero-button {
-	display: inline-block;
-	padding: 0.75rem 1.5rem;
-	font-size: 1rem;
-	color: #fff;
-	background-color: #0073aa;
-	text-decoration: none;
-	border-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px; /* Pill shape */
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+}
 
+.button-content {
+    display: flex;
+    align-items: center;
+}
+
+.steam-icon {
+    width: 30px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 0.75rem;
+}
+
+.button-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.download-text {
+    font-size: 0.75rem; /* Smaller text */
+}
+
+.steam-text {
+    font-size: 1rem; /* Larger text */
+    font-weight: bold; /* Make the text bold */
 }
 
 .hero-button:hover {
 	background-color: #005a87;
 }
 
-
-.steam-button-container {
-    background-color: blueviolet;
-    padding: 10px;
-}
-
-.steam-inner-content {
-    display: flex;
-    align-items: center; /* Ensure items align at the start */
-    gap: 10px; /* Add some gap between the image and the text */
-	background-color: lightgreen;
-}
-
 /*STEAM BUTTON SECTION*/
-.steam-button-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    background-color: black;
- 
+.steam-button-section {
+    position: relative;
+    margin-top: -100px; /* Adjust this value to control the overlap amount */
+    z-index: 2; /* Ensure it is above the hero section */
 }
-
-.steam-image-wrapper {
-    flex-shrink: 0; /* Prevent the image wrapper from shrinking */
-}
-
-.steam-image {
-    width: 100px;  /* Set the width to your desired value */
-    height: auto; /* Allow the height to adjust automatically */
-}
-
-.steam-button-description {
-    color: white; /* Ensure the text color contrasts with the background */
-}
-.buynow-button-container{
-	background-color: orangered;
-	display: flex;
-	justify-content: end;
-}
-
-.steam-button {
-    background-color: #0073aa;
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 10px;
-}
-
-.steam-button:hover {
-    background-color: #005a87;
-}
-
-/* VIDEO SECTION */
-.video-section {
-    
-}
-
-.video-section-container {
+.steam-button-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px 0 0 0; /* Adjust padding to create space around the widget */
+    background-color: #323232;
+    max-width: 660px; /* Slightly larger than the iframe */
+    margin: 0 auto; /* Center the container */
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better visibility */
+}
+
+.steam-widget iframe {
+    width: 646px; /* Fixed width as specified */
+    height: 190px; /* Fixed height as specified */
+    border: none; /* Remove iframe border */
+    
+}
+/* VIDEO SECTION */
+
+.video-section-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
     gap: 2rem; /* Space between video and feature container */
-    background-color: #0073aa;
 }
 
 .video-container {
     flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: cornflowerblue;
+    border-radius: 15px; /* Rounded corners */
 }
+
+
 
 .feature-container {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center items vertically */
     gap: 1rem; /* Space between feature items */
-    background-color: #992753;
-    padding: 1rem;
 }
 
 .feature-heading, .feature-description {
@@ -240,39 +230,40 @@ html {
     margin: 0; /* Remove default margin */
 }
 
-.section-title {}
 
-.video-container {}
+
+
 
 
 
 /* About the Game and Media Section Styles */
 
-.media-section,
-.news-section {
-	padding: 3rem 1rem;
-	background-color: #f9f9f9;
-	text-align: center;
-}
+
 
 .steam-button-section .container,
+.video-section,
 .media-section .container,
 .news-section .container,
 .site-footer .container,
-.reviews-section .container {
-	max-width: 800px;
-	margin: 0 auto;
-}
-.header-container{
-	max-width: 800px;
+.reviews-section .container,
+.header-container
+ {
+	max-width: 1200px;
 	margin: 0 auto;
 }
 
-.section-title {
-	font-size: 2.5rem;
-	margin-bottom: 1rem;
-	color: #333;
+/*SECTION DIVIDER*/
+.video-section,
+.media-section,
+.reviews-section,
+.site-footer
+{
+	margin-top: 8rem;
 }
+
+
+
+
 
 .section-divider {
 	width: 100px;
@@ -312,165 +303,68 @@ html {
 	transform: scale(1.05);
 }
 
-/* News Section Styles */
 
-
-.news-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Always 3 columns */
-    gap: 20px;
-}
-
-.news-card {
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: left;
-    position: relative;
-    height: 100%; /* Ensure the card takes full height */
-}
-
-.news-card-image-container {
-    width: 100%;
-    padding-top: 56.25%; /* 16:9 aspect ratio */
-    position: relative;
-    overflow: hidden;
-}
-
-.news-card-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.news-card-content {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-grow: 1; /* Ensure content takes remaining space */
-}
-
-.news-card-title {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.news-card-excerpt {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 1rem;
-}
-
-.news-card-link {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    color: #0073aa;
-    text-decoration: none;
-    border: 1px solid #0073aa;
-    border-radius: 0.25rem;
-    align-self: flex-start;
-}
-
-.news-card-link:hover {
-    background-color: #0073aa;
-    color: #fff;
-}
 
 
 /*REVIEWS SECTION*/
 .reviews-grid{
-	background-color: aqua;
+
 	display:flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	gap: 3rem;
 
+}
+.review-card{
+
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+	padding: 0;
+}
+.review-card-title{
+
+padding: 0;
+margin: 0;
+color:white
+}
+.review-author{ 
+	color: white;
+	width: 100%;
+	text-align: end;
+	padding: 0;
+	margin: 0;
 }
 
 
-/* NEWSLETTER SECTION */
-.newsletter-section {
 
-}
 
-.newsletter-content {
-    display: flex;
-    align-items: center;
-
-    gap: 1rem; /* Space between text and form elements */
-    text-align: center;
-}
-
-.newsletter-text {
-    font-size: 1.5rem;
-    margin-right: 1rem;
-}
-.wpcf7 form {
-    display: flex;
-   
-    gap: 1rem; /* Ensure there's space between form elements */
-    flex-wrap: nowrap; /* Prevent wrapping */
-}
-
-.wpcf7-form-control-wrap {
-    display: flex;
-}
-
-.wpcf7-form-control.wpcf7-email {
-    padding: 0.5rem;
-    font-size: 1rem;
-    flex: 1;
-    min-width: 250px;
-}
-
-.wpcf7-form-control.wpcf7-submit {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    background-color: #0073aa;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.wpcf7-form-control.wpcf7-submit:hover {
-    background-color: #005a87;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 1200px) {
-    .news-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
-    }
-}
-
-@media (max-width: 768px) {
-    .news-grid {
-        grid-template-columns: 1fr; /* 1 column for small screens */
-    }
-}
 
 
 /* Footer Section Styles */
-
+.site-footer {
+	background-color: #161624;
+	padding: 2rem 0;
+}
 .footer-content{
-	background-color: crimson;
+
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	
 }
+.social-media-title{
+	color: white;
+}
 
 .subscribe-button-container{
-	background-color: darkorange;
+
 	display: flex;
 	justify-content: center;
+	padding: 3rem 0;
 
 }
 .more-footer-content {
@@ -478,8 +372,9 @@ html {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: #0073aa;
+
 	color: white;
+	gap: 0.5rem;
 	
 }	
 .footer-logo{
@@ -489,7 +384,6 @@ html {
 .footer-legal {
     text-align: center;
     padding: 1rem;
-    background-color: #333; /* or any background color you prefer */
     color: #fff; /* or any text color you prefer */
 }
 
@@ -525,10 +419,7 @@ main {
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
-h1 {
-	font-size: 2em;
-	margin: 0.67em 0;
-}
+
 
 /* Grouping content
 	 ========================================================================== */
@@ -829,6 +720,35 @@ html {
 
 /* Typography
 --------------------------------------------- */
+
+/*CUSTOM TEXT STYLES*/
+.hero-title{
+	font-size: 4rem;
+
+}
+/*custom h2 styles*/
+.feature-heading,
+.review-author,
+.social-media-title
+{
+	font-size: 2rem;
+	
+}
+/*custom h1 styles*/
+.review-card-title{
+	font-size: 2.4rem;
+	
+}
+
+/*custom h3 styles*/
+.hero-subtitle,
+.feature-description,
+.feature-text{
+	font-size: 1.2rem;
+	
+}
+
+
 body,
 button,
 input,
@@ -851,7 +771,7 @@ h6 {
 }
 
 p {
-	margin-bottom: 1.5em;
+	
 }
 
 dfn,
@@ -905,7 +825,7 @@ big {
 /* Elements
 --------------------------------------------- */
 body {
-	background: #fff;
+	background: #020018;
 }
 
 hr {
@@ -1083,23 +1003,20 @@ textarea {
 
 /* Header Styles */
 .site-header {
-    background-color: dodgerblue;
+	position: fixed; /* Make sure the header stays on top */
+    background-color: rgb(9, 7, 25);
     color: #fff;
     padding: 1rem 0;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000; /* Ensure it appears above other content */
+	border-bottom: 2px solid #2c2c2c;
+	height: 5rem;
+	
 }
 
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-    margin: 0 auto;
-    padding: 0 1rem;
-}
+
 
 .site-branding {
     display: flex;
