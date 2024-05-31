@@ -9,15 +9,18 @@
  * @package Indie-Game
  */
 
+$header_enabled = get_theme_mod('header_enabled', true);
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.typekit.net/shn0ajg.css">
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<?php if ( $header_enabled ) : ?>
 <header id="masthead" class="site-header">
     <div class="header-container">
         <div class="site-branding">
@@ -39,3 +42,4 @@
         </div><!-- .site-branding -->
     </div><!-- .header-container -->
 </header><!-- #masthead -->
+<?php endif; ?>

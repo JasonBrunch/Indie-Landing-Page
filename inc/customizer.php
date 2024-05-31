@@ -32,6 +32,24 @@ function indie_game_customize_register( $wp_customize ) {
         );
     }
 
+        // Add Header Section
+        $wp_customize->add_section('header_section', array(
+            'title'    => __('Header Settings', 'indie-game'),
+            'priority' => 20,
+        ));
+    
+        // Header Enable/Disable Setting
+        $wp_customize->add_setting('header_enabled', array(
+            'default'           => true,
+            'sanitize_callback' => 'wp_validate_boolean',
+        ));
+    
+        $wp_customize->add_control('header_enabled', array(
+            'label'   => __('Enable Header', 'indie-game'),
+            'section' => 'header_section',
+            'type'    => 'checkbox',
+        ));
+
     // Add Hero Section
     $wp_customize->add_section('hero_section', array(
         'title'    => __('Hero Section', 'indie-game'),
@@ -72,6 +90,11 @@ function indie_game_customize_register( $wp_customize ) {
     )));
 }
 add_action( 'customize_register', 'indie_game_customize_register' );
+
+
+
+
+
 
 /**
  * Render the site title for the selective refresh partial.
