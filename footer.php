@@ -11,7 +11,7 @@
 
 ?>
 
-<footer id="colophon" class="site-footer debug">
+<footer id="colophon" class="site-footer">
     <div class="container"> 
         <div class="footer-content">
             <h2 class="social-media-title">MORE WIZARD HUNTER CONTENT IN THESE PLACES</h2>
